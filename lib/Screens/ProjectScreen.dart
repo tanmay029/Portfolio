@@ -3,23 +3,35 @@ import 'package:flutter/material.dart';
 class ProjectsScreen extends StatelessWidget {
   final void Function(Project) onProjectTap;
 
-  const ProjectsScreen({super.key, required this.onProjectTap});
+  ProjectsScreen({super.key, required this.onProjectTap});
 
-  final List<Project> projects = const [
+  final List<Project> projects = [
     Project(
       title: 'My Portfolio App',
       description: 'A personal portfolio app built with Flutter.',
       url: 'https://catalog-d7351.web.app',
+      techStack: [
+        'Flutter',
+        'Firebase',
+        'Stripe API',
+        'Provider',
+        'Cloud Firestore'
+      ],
+      githubUrl: 'https://github.com/tanmay029/catalog',
     ),
     Project(
       title: 'Weather App',
       description: 'A dummy weather app.',
       url: 'https://example.com/weather',
+      techStack: [],
+      githubUrl: '',
     ),
     Project(
       title: 'Todo Manager',
       description: 'A dummy todo app.',
       url: 'https://example.com/todo',
+      techStack: [],
+      githubUrl: '',
     ),
   ];
 
@@ -69,11 +81,15 @@ class ProjectsScreen extends StatelessWidget {
 class Project {
   final String title;
   final String description;
+  final List<String> techStack;
+  final String githubUrl;
   final String url;
 
-  const Project({
+  Project({
     required this.title,
     required this.description,
+    required this.techStack,
+    required this.githubUrl,
     required this.url,
   });
 }

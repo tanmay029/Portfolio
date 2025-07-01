@@ -21,7 +21,7 @@ class _SkillsScreenState extends State<SkillsScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2E0059),
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: const Text('Skills & Expertise'),

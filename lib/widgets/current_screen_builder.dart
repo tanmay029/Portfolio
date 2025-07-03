@@ -10,8 +10,8 @@ import '../main.dart';
 class CurrentScreenBuilder extends StatelessWidget {
   final SimulatorScreen currentScreen;
   final Function(SimulatorScreen) openScreen;
-  final dynamic selectedProject;
-  final Function(dynamic) onProjectSelected;
+  final Project? selectedProject; // ✅ Type is Project
+  final Function(Project) onProjectSelected;
 
   const CurrentScreenBuilder({
     Key? key,
@@ -25,22 +25,22 @@ class CurrentScreenBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (currentScreen) {
       case SimulatorScreen.home:
-  return KeyedSubtree(
-    key: const ValueKey('Home'),
-    child: Padding(
-      padding: const EdgeInsets.only(bottom: 40),
-      child: HomeScreenContent(
-        onSelectScreen: openScreen,
-      ),
-    ),
-  );
+        return KeyedSubtree(
+          key: const ValueKey('Home'),
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 40),
+            child: HomeScreenContent(
+              onSelectScreen: openScreen,
+            ),
+          ),
+        );
       case SimulatorScreen.projects:
         return KeyedSubtree(
           key: const ValueKey('Projects'),
           child: Padding(
             padding: const EdgeInsets.only(bottom: 40),
             child: ProjectsScreen(
-              onProjectTap: (project) => onProjectSelected(project),
+              onProjectTap: onProjectSelected,
             ),
           ),
         );
@@ -51,7 +51,7 @@ class CurrentScreenBuilder extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 40),
             child: ProjectDetailsScreen(
               project: selectedProject!,
-              onTestApp: () => openScreen(SimulatorScreen.testApp),
+              onTestApp: () => openScreen(SimulatorScreen.testApp),  // ✅ Navigates to TestApp
             ),
           ),
         );
@@ -72,11 +72,13 @@ class CurrentScreenBuilder extends StatelessWidget {
           ),
         );
       case SimulatorScreen.testApp:
-        return const KeyedSubtree(
-          key: ValueKey('TestApp'),
+        return KeyedSubtree(
+          key: const ValueKey('TestApp'),
           child: Padding(
-            padding: EdgeInsets.only(bottom: 40),
-            child: FlutterPortfolioAppView(),
+            padding: const EdgeInsets.only(bottom: 40),
+            child: FlutterPortfolioAppView(
+              projectUrl: selectedProject!.url,  // ✅ Pass correct URL
+            ),
           ),
         );
       case SimulatorScreen.about:

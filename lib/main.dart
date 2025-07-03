@@ -10,33 +10,40 @@ enum SimulatorScreen {
   skills,
   services,
   testApp,
-  about
+  about,
 }
 
 void main() {
-  FlutterAppSimulator.registerIframe();
   runApp(const PortfolioSimulatorApp());
 }
 
 class FlutterPortfolioAppView extends StatelessWidget {
-  const FlutterPortfolioAppView({super.key});
+  final String projectUrl;
+
+  const FlutterPortfolioAppView({
+    super.key,
+    required this.projectUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const HtmlElementView(viewType: 'iframe-simulator');
-  }
-}
+    final String viewType = 'iframe-simulator-${projectUrl.hashCode}';
 
-class FlutterAppSimulator {
-  static void registerIframe() {
+    
     ui.platformViewRegistry.registerViewFactory(
-      'iframe-simulator',
-      (int viewId) => html.IFrameElement()
-        ..src = 'https://catalog-d7351.web.app'
-        ..style.border = 'none'
-        ..style.width = '100%'
-        ..style.height = '100%',
+      viewType,
+      (int viewId) {
+        final iframe = html.IFrameElement()
+          ..src = projectUrl
+          ..style.border = 'none'
+          ..style.width = '100%'
+          ..style.height = '100%';
+
+        return iframe;
+      },
     );
+
+    return HtmlElementView(viewType: viewType);
   }
 }
 

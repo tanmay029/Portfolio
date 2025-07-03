@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
-
 import 'package:ios_simulator_flutter_web/Screens/ProjectScreen.dart';
-
-// import '../main.dart';
 
 class ProjectDetailsScreen extends StatelessWidget {
   final Project project;
@@ -76,7 +72,7 @@ class ProjectDetailsScreen extends StatelessWidget {
             SizedBox(
               width: 235,
               child: ElevatedButton.icon(
-                onPressed: onTestApp,
+                onPressed: onTestApp,  
                 icon: const Icon(Icons.play_arrow),
                 label: const Text(
                   'Try Simulator',

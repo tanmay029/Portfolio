@@ -7,8 +7,8 @@ class ProjectsScreen extends StatelessWidget {
 
   final List<Project> projects = [
     Project(
-      title: 'My Portfolio App',
-      description: 'A personal portfolio app built with Flutter.',
+      title: 'My Catalog App',
+      description: 'A Catalog app built with Flutter.',
       url: 'https://catalog-d7351.web.app',
       techStack: [
         'Flutter',
@@ -20,18 +20,23 @@ class ProjectsScreen extends StatelessWidget {
       githubUrl: 'https://github.com/tanmay029/catalog',
     ),
     Project(
-      title: 'Weather App',
-      description: 'A dummy weather app.',
-      url: 'https://example.com/weather',
-      techStack: [],
-      githubUrl: '',
+      title: 'D-Day',
+      description: 'A simple task reminder.',
+      url: 'https://dday-ecaf3.web.app',
+      techStack: [
+        'Flutter',
+        'Firebase',
+        'Provider',
+        'Cloud Firestore'
+      ],
+      githubUrl: 'https://github.com/tanmay029/D-Day',
     ),
     Project(
       title: 'Todo Manager',
       description: 'A dummy todo app.',
       url: 'https://example.com/todo',
-      techStack: [],
-      githubUrl: '',
+      techStack: ['Flutter'],
+      githubUrl: 'https://github.com/tanmay029/todo_manager',
     ),
   ];
 

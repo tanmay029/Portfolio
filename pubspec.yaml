@@ -18,3 +18,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/background1.jpg
+    - assets/screenshots/catalog_1.png
+    - assets/screenshots/catalog_2.png
+    - assets/screenshots/catalog_3.png
+    - assets/screenshots/catalog_4.png

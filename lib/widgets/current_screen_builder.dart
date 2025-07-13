@@ -51,7 +51,7 @@ class CurrentScreenBuilder extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 40),
             child: ProjectDetailsScreen(
               project: selectedProject!,
-              onTestApp: () => openScreen(SimulatorScreen.testApp),  // ✅ Navigates to TestApp
+              onTestApp: () => openScreen(SimulatorScreen.testApp),  
             ),
           ),
         );
@@ -77,7 +77,7 @@ class CurrentScreenBuilder extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(bottom: 40),
             child: FlutterPortfolioAppView(
-              projectUrl: selectedProject!.url,  // ✅ Pass correct URL
+              projectUrl: selectedProject!.url,  
             ),
           ),
         );

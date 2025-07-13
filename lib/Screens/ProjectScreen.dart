@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class ProjectsScreen extends StatelessWidget {
   final void Function(Project) onProjectTap;
 
-  ProjectsScreen({super.key, required this.onProjectTap});
+  const ProjectsScreen({super.key, required this.onProjectTap});
 
-  final List<Project> projects = [
+  final List<Project> projects = const [
     Project(
       title: 'My Catalog App',
       description: 'A Catalog app built with Flutter.',
@@ -18,6 +18,12 @@ class ProjectsScreen extends StatelessWidget {
         'Cloud Firestore'
       ],
       githubUrl: 'https://github.com/tanmay029/catalog',
+      screenshots: [
+        'assets/screenshots/catalog_1.png',
+        'assets/screenshots/catalog_2.png',
+        'assets/screenshots/catalog_3.png',
+        'assets/screenshots/catalog_4.png',
+      ],
     ),
     Project(
       title: 'D-Day',
@@ -26,17 +32,30 @@ class ProjectsScreen extends StatelessWidget {
       techStack: [
         'Flutter',
         'Firebase',
+        'Stripe API',
         'Provider',
         'Cloud Firestore'
       ],
       githubUrl: 'https://github.com/tanmay029/D-Day',
+      screenshots: [
+        'assets/screenshots/dday_1.png',
+        'assets/screenshots/dday_2.png',
+        'assets/screenshots/dday_3.png',
+        'assets/screenshots/dday_4.png',
+      ],
     ),
     Project(
       title: 'Todo Manager',
       description: 'A dummy todo app.',
       url: 'https://example.com/todo',
-      techStack: ['Flutter'],
-      githubUrl: 'https://github.com/tanmay029/todo_manager',
+      techStack: [],
+      githubUrl: '',
+      screenshots: [
+        'assets/screenshots/todo_1.png',
+        'assets/screenshots/todo_2.png',
+        'assets/screenshots/todo_3.png',
+        'assets/screenshots/todo_4.png',
+      ],
     ),
   ];
 
@@ -89,12 +108,14 @@ class Project {
   final List<String> techStack;
   final String githubUrl;
   final String url;
+  final List<String> screenshots;
 
-  Project({
+  const Project({
     required this.title,
     required this.description,
     required this.techStack,
     required this.githubUrl,
     required this.url,
+    required this.screenshots,
   });
 }

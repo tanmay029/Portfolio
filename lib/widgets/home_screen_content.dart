@@ -90,6 +90,25 @@ class HomeScreenContent extends StatelessWidget {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            margin: const EdgeInsets.symmetric(horizontal: 24),
+            decoration: BoxDecoration(
+              color: Colors.white12,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Text(
+              "Kindly use it on desktop, else the demo for some project might have some issues",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white70,
+                fontSize: 12,
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }

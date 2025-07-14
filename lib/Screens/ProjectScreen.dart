@@ -45,10 +45,23 @@ class ProjectsScreen extends StatelessWidget {
       ],
     ),
     Project(
+      title: 'This Simulator',
+      description: 'This Iphone simulator is a project itself.',
+      url: 'https://myportfolio-65f8e.web.app',
+      techStack: ['Flutter', 'Firebase', 'Dart'],
+      githubUrl: '',
+      screenshots: [
+        'assets/screenshots/sim_1.png',
+        'assets/screenshots/sim_2.png',
+        'assets/screenshots/sim_3.png',
+        'assets/screenshots/sim_4.png',
+      ],
+    ),
+    Project(
       title: 'Todo Manager',
       description: 'A dummy todo app.',
       url: 'https://example.com/todo',
-      techStack: [],
+      techStack: ['Flutter', 'Firebase', 'Dart'],
       githubUrl: '',
       screenshots: [
         'assets/screenshots/todo_1.png',

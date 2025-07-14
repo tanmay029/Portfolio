@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ios_simulator_flutter_web/widgets/app_icon_button.dart';
-import '../main.dart'; 
+import '../main.dart';
+import 'dart:html' as html;
+
 class HomeScreenContent extends StatelessWidget {
   final void Function(SimulatorScreen) onSelectScreen;
 
@@ -13,7 +15,7 @@ class HomeScreenContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 40), 
+        const SizedBox(height: 40),
         Column(
           children: [
             Container(
@@ -74,6 +76,16 @@ class HomeScreenContent extends StatelessWidget {
                 label: 'Services',
                 icon: Icons.work,
                 onTap: () => onSelectScreen(SimulatorScreen.services),
+              ),
+              AppIconButton(
+                label: 'Resume',
+                icon: Icons.file_download,
+                onTap: () {
+                  final url = 'assets/Tanmay_Resume.pdf';
+                  html.AnchorElement(href: url)
+                    ..setAttribute('download', 'Tanmay_Resume.pdf')
+                    ..click();
+                },
               ),
             ],
           ),

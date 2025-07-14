@@ -51,7 +51,7 @@ class CurrentScreenBuilder extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 40),
             child: ProjectDetailsScreen(
               project: selectedProject!,
-              onTestApp: () => openScreen(SimulatorScreen.testApp),  
+              onTestApp: () => openScreen(SimulatorScreen.testApp),
             ),
           ),
         );
@@ -77,7 +77,7 @@ class CurrentScreenBuilder extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(bottom: 40),
             child: FlutterPortfolioAppView(
-              projectUrl: selectedProject!.url,  
+              projectUrl: selectedProject!.url,
             ),
           ),
         );
@@ -89,6 +89,7 @@ class CurrentScreenBuilder extends StatelessWidget {
             child: AboutMeScreen(),
           ),
         );
+      // ✅ Removed SimulatorScreen.resume because you’ll handle the download directly
     }
   }
 }

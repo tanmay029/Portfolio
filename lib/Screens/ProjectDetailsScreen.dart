@@ -48,8 +48,9 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
   void _swipeRight() {
     if (_expandedIndex != null) {
       setState(() {
-        _expandedIndex = (_expandedIndex! - 1 + widget.project.screenshots.length) %
-            widget.project.screenshots.length;
+        _expandedIndex =
+            (_expandedIndex! - 1 + widget.project.screenshots.length) %
+                widget.project.screenshots.length;
       });
     }
   }
@@ -176,7 +177,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                     ),
                     Positioned(
                       top: 40,
-                      right: 40,
+                      right: 280,
                       child: IconButton(
                         icon: const Icon(Icons.close,
                             color: Colors.white, size: 32),

@@ -29,7 +29,6 @@ class FlutterPortfolioAppView extends StatelessWidget {
   Widget build(BuildContext context) {
     final String viewType = 'iframe-simulator-${projectUrl.hashCode}';
 
-    
     ui.platformViewRegistry.registerViewFactory(
       viewType,
       (int viewId) {

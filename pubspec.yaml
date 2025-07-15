@@ -31,4 +31,6 @@ flutter:
     - assets/screenshots/sim_2.png
     - assets/screenshots/sim_3.png
     - assets/screenshots/sim_4.png
-    - assets/Tanmay_Resume.pdf
+    # - assets/Tanmay_Resume.pdf
+    # - assets/Tanmay_Resume1.pdf
+    # - assets/Tanmay_Kumar.pdf

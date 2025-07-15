@@ -64091,7 +64091,7 @@ $0(){return this.a.c.$1(B.HH)},
 $S:0}
 A.UF.prototype={
 $0(){var s=document.createElement("a")
-s.href="assets/Tanmay_Resume.pdf"
+s.href="resume/Tanmay_Resume.pdf"
 s.setAttribute("download","Tanmay_Resume.pdf")
 s.click()},
 $S:0}

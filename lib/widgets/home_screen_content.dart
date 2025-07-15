@@ -81,7 +81,7 @@ class HomeScreenContent extends StatelessWidget {
                 label: 'Resume',
                 icon: Icons.file_download,
                 onTap: () {
-                  final url = 'assets/Tanmay_Resume.pdf';
+                  final url = 'resume/Tanmay_Resume.pdf';
                   html.AnchorElement(href: url)
                     ..setAttribute('download', 'Tanmay_Resume.pdf')
                     ..click();

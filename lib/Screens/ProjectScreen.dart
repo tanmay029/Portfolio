@@ -60,7 +60,7 @@ class ProjectsScreen extends StatelessWidget {
     Project(
       title: 'Todo Manager',
       description: 'A dummy todo app.',
-      url: 'https://example.com/todo',
+      url: 'https://dday-ecaf3.web.app',
       techStack: ['Flutter', 'Firebase', 'Dart'],
       githubUrl: '',
       screenshots: [

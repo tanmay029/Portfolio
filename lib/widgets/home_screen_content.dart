@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ios_simulator_flutter_web/widgets/app_icon_button.dart';
 import '../main.dart';
 import 'dart:html' as html;
+// import 'package:ios_simulator_flutter_web/widgets/ios_status_bar.dart'; // Import the new status bar
 
 class HomeScreenContent extends StatelessWidget {
   final void Function(SimulatorScreen) onSelectScreen;
@@ -15,7 +16,6 @@ class HomeScreenContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(height: 40),
         Column(
           children: [
             Container(

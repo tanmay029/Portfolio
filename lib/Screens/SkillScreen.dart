@@ -11,11 +11,11 @@ class _SkillsScreenState extends State<SkillsScreen>
     with TickerProviderStateMixin {
   final List<Skill> skills = [
     Skill(name: 'Flutter', icon: '🚀', percent: 0.985),
-    Skill(name: 'Dart', icon: '⚡', percent: 0.985),
-    Skill(name: 'Firebase', icon: '🔥', percent: 0.985),
-    Skill(name: 'State Management', icon: '🧩', percent: 0.985),
-    Skill(name: 'API Integration', icon: '🌐', percent: 0.985),
-    Skill(name: 'UI/UX Design', icon: '🎨', percent: 0.985),
+    Skill(name: 'Dart', icon: '⚡', percent: 0.960),
+    Skill(name: 'Firebase', icon: '🔥', percent: 0.890),
+    Skill(name: 'State Management', icon: '🧩', percent: 0.920),
+    Skill(name: 'API Integration', icon: '🌐', percent: 0.850),
+    Skill(name: 'UI/UX Design', icon: '🎨', percent: 0.900),
   ];
 
   @override
@@ -83,61 +83,70 @@ class _AnimatedSkillBarState extends State<_AnimatedSkillBar>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.05),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('${widget.skill.icon} ${widget.skill.name}',
-              style: const TextStyle(color: Colors.white, fontSize: 16)),
-          const SizedBox(height: 8),
-          AnimatedBuilder(
-            animation: _animation,
-            builder: (context, child) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Stack(
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final barMaxWidth = constraints.maxWidth -
+            32; // minus horizontal padding in Container below
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.05),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('${widget.skill.icon} ${widget.skill.name}',
+                  style: const TextStyle(color: Colors.white, fontSize: 16)),
+              const SizedBox(height: 8),
+              AnimatedBuilder(
+                animation: _animation,
+                builder: (context, child) {
+                  final filledWidth = barMaxWidth * _animation.value;
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 8,
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                      ),
-                      Container(
-                        height: 8,
-                        width: MediaQuery.of(context).size.width *
-                            _animation.value *
-                            0.8,
-                        decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                            colors: [Color(0xFF7F00FF), Color(0xFFE100FF)],
+                      Stack(
+                        children: [
+                          Container(
+                            height: 8,
+                            width: barMaxWidth,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
                           ),
-                          borderRadius: BorderRadius.circular(4),
+                          Container(
+                            height: 8,
+                            width: filledWidth,
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color(0xFF00BFFF),
+                                  Color(0xFF87CEFA),
+                                ],
+                              ),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          '${(_animation.value * 100).toStringAsFixed(1)}%',
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ),
                     ],
-                  ),
-                  const SizedBox(height: 8),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      '${((_controller.isCompleted ? widget.skill.percent : _animation.value) * 100).toStringAsFixed(1)}%',
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                  ),
-                ],
-              );
-            },
+                  );
+                },
+              ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

@@ -10,7 +10,7 @@ import '../main.dart';
 class CurrentScreenBuilder extends StatelessWidget {
   final SimulatorScreen currentScreen;
   final Function(SimulatorScreen) openScreen;
-  final Project? selectedProject; // ✅ Type is Project
+  final Project? selectedProject;  
   final Function(Project) onProjectSelected;
 
   const CurrentScreenBuilder({
@@ -89,7 +89,6 @@ class CurrentScreenBuilder extends StatelessWidget {
             child: AboutMeScreen(),
           ),
         );
-      // ✅ Removed SimulatorScreen.resume because you’ll handle the download directly
     }
   }
 }

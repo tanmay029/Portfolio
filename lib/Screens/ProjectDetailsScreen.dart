@@ -57,6 +57,9 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final bool isSimulatorProject =
+        widget.project.title.toLowerCase().contains('simulator');
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Stack(
@@ -134,24 +137,44 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                   },
                 ),
                 const Spacer(),
-                SizedBox(
-                  width: 235,
-                  child: ElevatedButton.icon(
-                    onPressed: widget.onTestApp,
-                    icon: const Icon(Icons.play_arrow),
-                    label: const Text(
-                      'Try Simulator',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2196F3),
-                      padding: const EdgeInsets.symmetric(vertical: 16),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                if (!isSimulatorProject)
+                  SizedBox(
+                    width: 235,
+                    child: ElevatedButton.icon(
+                      onPressed: widget.onTestApp,
+                      icon: const Icon(Icons.play_arrow),
+                      label: const Text(
+                        'Try Simulator',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2196F3),
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                if (isSimulatorProject)
+                  SizedBox(
+                    width: 235,
+                    child: ElevatedButton.icon(
+                      onPressed: null, // disables the button
+                      icon: const Icon(Icons.play_arrow),
+                      label: const Text(
+                        'Already in Simulator',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey,
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                    ),
+                  ),
               ],
             ),
           ),

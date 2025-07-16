@@ -38,7 +38,6 @@ class AppCard extends StatelessWidget {
           key: ValueKey('About'),
           child: AboutMeScreen(),
         );
-      // ✅ Removed SimulatorScreen.resume — you won’t need it!
     }
 
     return Center(

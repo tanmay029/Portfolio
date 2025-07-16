@@ -57,19 +57,19 @@ class ProjectsScreen extends StatelessWidget {
         'assets/screenshots/sim_4.png',
       ],
     ),
-    Project(
-      title: 'Todo Manager',
-      description: 'A dummy todo app.',
-      url: 'https://dday-ecaf3.web.app',
-      techStack: ['Flutter', 'Firebase', 'Dart'],
-      githubUrl: '',
-      screenshots: [
-        'assets/screenshots/todo_1.png',
-        'assets/screenshots/todo_2.png',
-        'assets/screenshots/todo_3.png',
-        'assets/screenshots/todo_4.png',
-      ],
-    ),
+    // Project(
+    //   title: 'Todo Manager',
+    //   description: 'A dummy todo app.',
+    //   url: 'https://dday-ecaf3.web.app',
+    //   techStack: ['Flutter', 'Firebase', 'Dart'],
+    //   githubUrl: '',
+    //   screenshots: [
+    //     'assets/screenshots/todo_1.png',
+    //     'assets/screenshots/todo_2.png',
+    //     'assets/screenshots/todo_3.png',
+    //     'assets/screenshots/todo_4.png',
+    //   ],
+    // ),
   ];
 
   @override

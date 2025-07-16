@@ -46,7 +46,7 @@ class ProjectsScreen extends StatelessWidget {
     ),
     Project(
       title: 'This Simulator',
-      description: 'This Iphone simulator is a project itself.',
+      description: 'This iPhone simulator is a project itself.',
       url: 'https://myportfolio-65f8e.web.app',
       techStack: ['Flutter', 'Firebase', 'Dart'],
       githubUrl: '',
@@ -57,60 +57,63 @@ class ProjectsScreen extends StatelessWidget {
         'assets/screenshots/sim_4.png',
       ],
     ),
-    // Project(
-    //   title: 'Todo Manager',
-    //   description: 'A dummy todo app.',
-    //   url: 'https://dday-ecaf3.web.app',
-    //   techStack: ['Flutter', 'Firebase', 'Dart'],
-    //   githubUrl: '',
-    //   screenshots: [
-    //     'assets/screenshots/todo_1.png',
-    //     'assets/screenshots/todo_2.png',
-    //     'assets/screenshots/todo_3.png',
-    //     'assets/screenshots/todo_4.png',
-    //   ],
-    // ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Text(
-          'My Projects',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 16),
-        Expanded(
-          child: GridView.builder(
-            itemCount: projects.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
+    return SafeArea( // ✅ SafeArea keeps it inside the phone notch/borders
+      child: Padding(
+        padding: const EdgeInsets.all(16.0), // ✅ Padding to not touch edges
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'My Projects',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
-            itemBuilder: (context, index) {
-              final project = projects[index];
-              return GestureDetector(
-                onTap: () => onProjectTap(project),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white10,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Center(
-                    child: Text(
-                      project.title,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(color: Colors.white),
-                    ),
-                  ),
+            const SizedBox(height: 12),
+            Expanded(
+              child: GridView.builder(
+                itemCount: projects.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 12,
+                  crossAxisSpacing: 12,
+                  childAspectRatio: 1.2, // ✅ Better sizing
                 ),
-              );
-            },
-          ),
+                itemBuilder: (context, index) {
+                  final project = projects[index];
+                  return GestureDetector(
+                    onTap: () => onProjectTap(project),
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white10,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.white12),
+                      ),
+                      child: Center(
+                        child: Text(
+                          project.title,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

@@ -5,7 +5,6 @@ import 'package:ios_simulator_flutter_web/Screens/ProjectScreen.dart';
 import 'package:ios_simulator_flutter_web/Screens/ServicesScreen.dart';
 import 'package:ios_simulator_flutter_web/Screens/SkillScreen.dart';
 import 'package:ios_simulator_flutter_web/widgets/home_screen_content.dart';
-import 'package:ios_simulator_flutter_web/widgets/ios_status_bar.dart';
 import '../main.dart';
 
 class CurrentScreenBuilder extends StatelessWidget {
@@ -87,17 +86,11 @@ class CurrentScreenBuilder extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             child: Column(
               children: [
-                // ✅ Your custom status bar stays visible
-                // const IOSStatusBar(),
-
-                // ✅ The embedded web app fills the remaining space
                 Expanded(
                   child: FlutterPortfolioAppView(
                     projectUrl: selectedProject!.url,
                   ),
                 ),
-
-                // ✅ Add a bottom safe gap for the handle / gesture bar
                 const SizedBox(height: 40),
               ],
             ),

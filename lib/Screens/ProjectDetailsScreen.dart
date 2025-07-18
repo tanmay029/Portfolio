@@ -160,7 +160,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                   SizedBox(
                     width: 235,
                     child: ElevatedButton.icon(
-                      onPressed: null, // disables the button
+                      onPressed: null, 
                       icon: const Icon(Icons.play_arrow),
                       label: const Text(
                         'Already in Simulator',

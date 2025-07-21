@@ -3,11 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "815db8cedcf453b8530a12327af89590",
+const RESOURCES = {"flutter_bootstrap.js": "2af9e091d3c93b5b276b0ede1104b062",
 "version.json": "d933cf248696c89485573ffa53a35120",
 "index.html": "3106e8d4f8ce3ec1a755c5e92aef8f67",
 "/": "3106e8d4f8ce3ec1a755c5e92aef8f67",
-"main.dart.js": "0a5fb43dc0958a7d3f00942e633c8828",
+"main.dart.js": "a73d690cd3a62bb1e2a9cc2782f5b57a",
 "resume/Tanmay_Resume.pdf": "1a645fd6e52c279118693f013f96d9b3",
 "flutter.js": "76f08d47ff9f5715220992f993002504",
 "assets/AssetManifest.json": "7154e72e908f05cc849a9e7620e3d677",
@@ -17,7 +17,7 @@ const RESOURCES = {"flutter_bootstrap.js": "815db8cedcf453b8530a12327af89590",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "33b7d9392238c04c131b6ce224e13711",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "assets/AssetManifest.bin": "58d994eafa6b714ba77af641e8ea7d58",
-"assets/fonts/MaterialIcons-Regular.otf": "61a49e95e5ebb8187e3ccf218dad29b6",
+"assets/fonts/MaterialIcons-Regular.otf": "3505dfc9303f18a3a999ef1f0dbd60b2",
 "assets/assets/screenshots/sim_1.png": "d680dff3733c38722e51df82f56905d3",
 "assets/assets/screenshots/sim_3.png": "c62bdc8280a0651856089f9c2f091366",
 "assets/assets/screenshots/sim_2.png": "4276a0b48da7d8153315269db038748d",

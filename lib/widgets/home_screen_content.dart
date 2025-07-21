@@ -77,16 +77,16 @@ class HomeScreenContent extends StatelessWidget {
                 icon: Icons.work,
                 onTap: () => onSelectScreen(SimulatorScreen.services),
               ),
-              AppIconButton(
-                label: 'Resume',
-                icon: Icons.file_download,
-                onTap: () {
-                  final url = 'resume/Tanmay_Resume.pdf';
-                  html.AnchorElement(href: url)
-                    ..setAttribute('download', 'Tanmay_Resume.pdf')
-                    ..click();
-                },
-              ),
+              // AppIconButton(
+              //   label: 'Resume',
+              //   icon: Icons.file_download,
+              //   onTap: () {
+              //     final url = 'resume/Tanmay_Resume.pdf';
+              //     html.AnchorElement(href: url)
+              //       ..setAttribute('download', 'Tanmay_Resume.pdf')
+              //       ..click();
+              //   },
+              // ),
             ],
           ),
         ),

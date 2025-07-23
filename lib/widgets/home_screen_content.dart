@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ios_simulator_flutter_web/widgets/app_icon_button.dart';
 import '../main.dart';
-import 'dart:html' as html;
+// import 'dart:html' as html;
 // import 'package:ios_simulator_flutter_web/widgets/ios_status_bar.dart'; // Import the new status bar
 
 class HomeScreenContent extends StatelessWidget {

@@ -61,9 +61,9 @@ class ProjectsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea( // ✅ SafeArea keeps it inside the phone notch/borders
+    return SafeArea( 
       child: Padding(
-        padding: const EdgeInsets.all(16.0), // ✅ Padding to not touch edges
+        padding: const EdgeInsets.all(16.0), 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -83,7 +83,7 @@ class ProjectsScreen extends StatelessWidget {
                   crossAxisCount: 2,
                   mainAxisSpacing: 12,
                   crossAxisSpacing: 12,
-                  childAspectRatio: 1.2, // ✅ Better sizing
+                  childAspectRatio: 1.2, 
                 ),
                 itemBuilder: (context, index) {
                   final project = projects[index];

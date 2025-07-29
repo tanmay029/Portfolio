@@ -222,7 +222,7 @@ class _ProjectDetailsScreenState extends State<ProjectDetailsScreen> {
                       right: 280,
                       child: IconButton(
                         icon: const Icon(Icons.close,
-                            color: Colors.white, size: 32),
+                            color: Colors.black, size: 32),
                         onPressed: _closeExpanded,
                       ),
                     ),

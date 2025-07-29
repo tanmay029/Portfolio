@@ -57,13 +57,26 @@ class ProjectsScreen extends StatelessWidget {
         'assets/screenshots/sim_4.png',
       ],
     ),
+    Project(
+      title: 'Quitters Win',
+      description: 'A smoke tracking app.',
+      url: 'https://quitters-win.web.app',
+      techStack: ['Flutter', 'Firebase', 'Dart'],
+      githubUrl: 'https://github.com/tanmay029/Quitters_win',
+      screenshots: [
+        'assets/screenshots/qwin_1.png',
+        'assets/screenshots/qwin_2.png',
+        'assets/screenshots/qwin_3.png',
+        'assets/screenshots/qwin_4.png',
+      ],
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea( 
+    return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(16.0), 
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -83,7 +96,7 @@ class ProjectsScreen extends StatelessWidget {
                   crossAxisCount: 2,
                   mainAxisSpacing: 12,
                   crossAxisSpacing: 12,
-                  childAspectRatio: 1.2, 
+                  childAspectRatio: 1.2,
                 ),
                 itemBuilder: (context, index) {
                   final project = projects[index];

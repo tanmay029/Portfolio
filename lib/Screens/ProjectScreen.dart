@@ -6,44 +6,61 @@ class ProjectsScreen extends StatelessWidget {
   const ProjectsScreen({super.key, required this.onProjectTap});
 
   final List<Project> projects = const [
+    // Project(
+    //   title: 'My Catalog App',
+    //   description: 'A Catalog app built with Flutter.',
+    //   url: 'https://catalog-d7351.web.app',
+    //   techStack: [
+    //     'Flutter',
+    //     'Firebase',
+    //     'Stripe API',
+    //     'Provider',
+    //     'Cloud Firestore'
+    //   ],
+    //   githubUrl: 'https://github.com/tanmay029/catalog',
+    //   screenshots: [
+    //     'assets/screenshots/catalog_1.png',
+    //     'assets/screenshots/catalog_2.png',
+    //     'assets/screenshots/catalog_3.png',
+    //     'assets/screenshots/catalog_4.png',
+    //   ],
+    // ),
     Project(
-      title: 'My Catalog App',
-      description: 'A Catalog app built with Flutter.',
-      url: 'https://catalog-d7351.web.app',
+      title: 'Stay Mate',
+      description: 'An air-bnb style hotel booking app built with Flutter.',
+      url: 'https://staymate-a3382.web.app',
       techStack: [
         'Flutter',
         'Firebase',
-        'Stripe API',
-        'Provider',
-        'Cloud Firestore'
+        'GetX',
       ],
-      githubUrl: 'https://github.com/tanmay029/catalog',
+      githubUrl: 'https://github.com/tanmay029/StayMate',
       screenshots: [
-        'assets/screenshots/catalog_1.png',
-        'assets/screenshots/catalog_2.png',
-        'assets/screenshots/catalog_3.png',
-        'assets/screenshots/catalog_4.png',
+        'assets/screenshots/sm_1.png',
+        'assets/screenshots/sm_2.png',
+        'assets/screenshots/sm_3.png',
+        'assets/screenshots/sm_4.png',
       ],
     ),
-    Project(
-      title: 'D-Day',
-      description: 'A simple task reminder.',
-      url: 'https://dday-ecaf3.web.app',
-      techStack: [
-        'Flutter',
-        'Firebase',
-        'Stripe API',
-        'Provider',
-        'Cloud Firestore'
-      ],
-      githubUrl: 'https://github.com/tanmay029/D-Day',
-      screenshots: [
-        'assets/screenshots/dday_1.png',
-        'assets/screenshots/dday_2.png',
-        'assets/screenshots/dday_3.png',
-        'assets/screenshots/dday_4.png',
-      ],
-    ),
+    // Project(
+    //   title: 'D-Day',
+    //   description: 'A simple task reminder.',
+    //   url: 'https://dday-ecaf3.web.app',
+    //   techStack: [
+    //     'Flutter',
+    //     'Firebase',
+    //     'Stripe API',
+    //     'Provider',
+    //     'Cloud Firestore'
+    //   ],
+    //   githubUrl: 'https://github.com/tanmay029/D-Day',
+    //   screenshots: [
+    //     'assets/screenshots/dday_1.png',
+    //     'assets/screenshots/dday_2.png',
+    //     'assets/screenshots/dday_3.png',
+    //     'assets/screenshots/dday_4.png',
+    //   ],
+    // ),
     Project(
       title: 'This Simulator',
       description: 'This iPhone simulator is a project itself.',
@@ -68,6 +85,19 @@ class ProjectsScreen extends StatelessWidget {
         'assets/screenshots/qwin_2.png',
         'assets/screenshots/qwin_3.png',
         'assets/screenshots/qwin_4.png',
+      ],
+    ),
+    Project(
+      title: 'Cook Book',
+      description: 'A Simple recipe book app.',
+      url: 'https://cook-book-af0b4.web.app',
+      techStack: ['Flutter', 'Firebase', 'Dart'],
+      githubUrl: 'https://github.com/tanmay029/cook_book',
+      screenshots: [
+        'assets/screenshots/cbook_1.png',
+        'assets/screenshots/cbook_2.png',
+        'assets/screenshots/cbook_3.png',
+        'assets/screenshots/cbook_4.png',
       ],
     ),
   ];
